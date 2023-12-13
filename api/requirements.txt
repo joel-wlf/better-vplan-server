@@ -2,6 +2,5 @@ flask
 bs4
 requests
 datetime
-gzip
 uuid
 base64
