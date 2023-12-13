@@ -1,7 +1,6 @@
 flask
 bs4
 requests
-json
 datetime
 gzip
 uuid
