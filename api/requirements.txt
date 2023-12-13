@@ -3,4 +3,3 @@ bs4
 requests
 datetime
 uuid
-base64
