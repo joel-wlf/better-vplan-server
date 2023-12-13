@@ -182,9 +182,11 @@ class DSBApi:
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/')
 def home():
-    dsbclient = DSBApi(request.args.username, request.args.password)
+    data = request.args
+
+    dsbclient = DSBApi(data['username'], data['password'])
     entries = dsbclient.fetch_entries()
 
     return entries
