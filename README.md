@@ -11,7 +11,7 @@ https://better-vplan-server.vercel.app/
 
 #### Get full substitution plan
 
-```http
+```
   POST /
 ```
 
@@ -57,7 +57,3 @@ This project is licensed under the [Apache 2.0](https://choosealicense.com/licen
 ## Acknowledgements
 
  - [DSBApi](https://github.com/nerrixde/DSBApi) library
-## Authors
-
-- [@octokatherine](https://www.github.com/octokatherine)
-
