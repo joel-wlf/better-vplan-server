@@ -1,6 +1,6 @@
 # better-vplan-server
 
-REST API server built with flask, based on the dsbapipy library from [@nerrixde](https://github.com/nerrixde) - will be used in my upcoming custom DSB client.
+REST API server built with flask, based on the dsbapipy library from [@nerrixde](https://github.com/nerrixde) - will be used in my upcoming custom DSB client. I had to put everything into one file and remove some code due to some import errors. Sorry for the messy code... This is my first fullstack project 
 ## Demo
 
 
