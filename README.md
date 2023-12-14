@@ -1,28 +1,63 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# better-vplan-server
 
-# Flask + Vercel
-
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
-
+REST API server built with flask, based on the dsbapipy library from [@nerrixde](https://github.com/nerrixde) - will be used in my upcoming custom DSB client.
 ## Demo
 
-https://flask-python-template.vercel.app/
 
-## How it Works
+This API is also hosted here: 
 
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
+https://better-vplan-server.vercel.app/
+## API Reference
 
-## Running Locally
+#### Get full substitution plan
 
-```bash
-npm i -g vercel
-vercel dev
+```http
+  POST /
 ```
 
-Your Flask application is now available at `http://localhost:3000`.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `username`| `string` | Your DSBmobile username |
+| `password` | `string` | Your DSBmobile  password | 
 
-## One-Click Deploy
+#### More options will follow soon...
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/joel-wlf/better-vplan-server.git
+```
+
+Go to the project directory
+
+```bash
+  cd better-vplan-server
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Start the server
+
+```bash
+  flask run
+```
+
+
+## License
+
+This project is licensed under the [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/) License.
+
+## Acknowledgements
+
+ - [DSBApi](https://github.com/nerrixde/DSBApi) library
+## Authors
+
+- [@octokatherine](https://www.github.com/octokatherine)
+
