@@ -189,7 +189,9 @@ def home():
     dsbclient = DSBApi(data['username'], data['password'])
     entries = dsbclient.fetch_entries()
 
-    return entries
+    output = entries[0] + entries[1]
+
+    return output
 
 @app.route('/about')
 def about():
