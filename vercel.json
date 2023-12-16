@@ -8,7 +8,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "http://localhost:5173, https://better-vplan.vercel.app"
+          "value": "https://better-vplan.vercel.app"
         },
         {
           "key": "Access-Control-Allow-Methods",

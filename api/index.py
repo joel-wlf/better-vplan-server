@@ -182,7 +182,7 @@ class DSBApi:
 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:5173", "https://better-vplan.vercel.app"])
 
 @app.route('/', methods=['POST'])
 def home():
