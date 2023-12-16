@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask_cors import CORS
 import bs4
 import json
 import requests
@@ -181,6 +182,7 @@ class DSBApi:
 
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/', methods=['POST'])
 def home():
