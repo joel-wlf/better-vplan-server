@@ -1,5 +1,4 @@
-from flask import Flask, request
-from flask_cors import CORS
+from flask import Flask, request, jsonify
 import bs4
 import json
 import requests
@@ -183,7 +182,6 @@ class DSBApi:
 
 
 app = Flask(__name__)
-CORS(app)
 
 @app.route('/', methods=['POST'])
 def home():
@@ -197,7 +195,10 @@ def home():
     elif len(entries) > 5:
         output = entries
 
-    return output
+    response = jsonify(output)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
 
 @app.route('/about')
 def about():
