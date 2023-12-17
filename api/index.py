@@ -7,6 +7,7 @@ import datetime
 import gzip
 import uuid
 import base64
+import itertools
 
 #try:
 from PIL import Image
@@ -182,7 +183,7 @@ class DSBApi:
 
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173", "https://better-vplan.vercel.app"], supports_credentials=True)
+CORS(app)
 
 @app.route('/', methods=['POST'])
 def home():
@@ -191,7 +192,10 @@ def home():
     dsbclient = DSBApi(data['username'], data['password'])
     entries = dsbclient.fetch_entries()
 
-    output = entries[0] + entries[1]
+    if len(entries) < 5:
+        output = list(itertools.chain.from_iterable(entries))
+    elif len(entries) > 5:
+        output = entries
 
     return output
 
