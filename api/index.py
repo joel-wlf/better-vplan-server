@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import cross_origin
 import bs4
 import json
 import requests
@@ -184,6 +185,7 @@ class DSBApi:
 app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
+@cross_origin()
 def home():
     data = request.get_json()
 
