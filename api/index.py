@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import cross_origin
+from flask_cors import cross_origin, CORS
 import bs4
 import json
 import requests
@@ -183,6 +183,7 @@ class DSBApi:
 
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/', methods=['POST'])
 @cross_origin()
