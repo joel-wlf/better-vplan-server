@@ -199,7 +199,6 @@ def home():
         output = entries
 
     response = jsonify(output)
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5173/')
 
     return response
 
